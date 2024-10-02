@@ -67,7 +67,6 @@ export const useLiveStream = () => {
         preset: 'custom',
         composition_params: params,
         session_assets,
-        // @ts-ignore
         participants: {
           video: participantIds,
           audio: participantIds,
@@ -89,10 +88,12 @@ export const useLiveStream = () => {
       params,
     );
 
-    const areParticipantsEqual = dequal(
-      (layout as DailyUpdateStreamingCustomLayoutConfig).video,
-      participantIds,
-    );
+    const preset = layout?.preset;
+    const layoutParticipants =
+      preset === 'single-participant'
+        ? [layout?.session_id]
+        : layout?.participants;
+    const areParticipantsEqual = dequal(layoutParticipants, participantIds);
 
     if (areParamsEqual && areParticipantsEqual) return;
 
@@ -101,7 +102,6 @@ export const useLiveStream = () => {
       layout: {
         preset: 'custom',
         composition_params: params,
-        // @ts-ignore
         participants: {
           video: participantIds,
           audio: participantIds,
