@@ -1,6 +1,6 @@
 {
   "name": "vcs-studio",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -16,10 +16,10 @@
     "analyze": "ANALYZE=true yarn build"
   },
   "dependencies": {
-    "@daily-co/daily-js": "^0.53.0",
-    "@daily-co/daily-react": "^0.15.0",
-    "@daily-co/daily-vcs-web": "^0.0.1-alpha.9",
-    "@daily-co/vcs-composition-daily-baseline-web": "^0.1.9",
+    "@daily-co/daily-js": "^0.72.0 ",
+    "@daily-co/daily-react": "^0.20.0",
+    "@daily-co/daily-vcs-web": "^0.0.2-alpha.5",
+    "@daily-co/vcs-composition-daily-baseline-web": "^0.2.8",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
     "@radix-ui/react-dialog": "^1.0.4",
     "@radix-ui/react-dropdown-menu": "^2.0.5",
@@ -39,8 +39,8 @@
     "linkifyjs": "^4.1.1",
     "lucide-react": "^0.274.0",
     "next": "^13.5.5",
-    "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react": "^18.2.0",
     "recoil": "^0.7.7",
     "sharp": "^0.32.5",
     "tailwind-merge": "^1.14.0",

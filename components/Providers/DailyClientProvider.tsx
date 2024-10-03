@@ -46,8 +46,10 @@ export function DailyClientProvider({
           subscribeToTracksAutomatically: false,
         });
       } catch {
-        newCallObject = DailyIframe.getCallInstance();
+        newCallObject = DailyIframe.getCallInstance() ?? null;
       }
+
+      if (!newCallObject) return;
       setCallObject(newCallObject);
       // attach callObject to window
       (window as any)['callObject'] = newCallObject;
